@@ -5,7 +5,7 @@ import LLM_Router from "./routes/llmroute.js";
 const app = express();
 
 app.use(cors({
-  origin: "https://amd-hackathon-frontend-git-main-nikhil20073110-4360s-projects.vercel.app/",  // your frontend URL
+  origin: "https://amd-hackathon-frontend-git-main-nikhil20073110-4360s-projects.vercel.app",  // your frontend URL
     methods: ["GET", "POST"],
     credentials: true
 }));
