@@ -5,7 +5,7 @@ import LLM_Router from "./routes/llmroute.js";
 const app = express();
 
 app.use(cors({
-  origin: " ",  // your frontend URL
+  origin: "https://amd-hackathon-frontend-git-main-nikhil20073110-4360s-projects.vercel.app/",  // your frontend URL
     methods: ["GET", "POST"],
     credentials: true
 }));
@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
 app.post("/api/recommend", async (req, res) => {
     try {
         const response = await axios.post(
-            "http://localhost:8000/recommend",
+            "https://amd-slingshot-hackathon.onrender.com/recommend",
             req.body
         );
 
