@@ -92,7 +92,7 @@ Do not repeat unnecessary information.
 
   try {
     const response = await axios.post("http://40.81.28.120:11434/api/generate", {
-      model: "mistral",   // or "phi" if you pulled that
+      model: "tinyllama",   // or "phi" if you pulled that
       prompt: prompt,
       stream: false
     });
