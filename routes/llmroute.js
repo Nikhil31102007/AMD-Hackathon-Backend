@@ -39,12 +39,14 @@ Do not restate the entire recommendation unless necessary.
 
 try {
     const completion = await client.chat.completions.create({
-    model: "mistralai/Mistral-7B-Instruct-v0.3",
-    messages: [
-        { role: "system", content: "You are a strict technical decision advisor." },
-        { role: "user", content: prompt }
-    ] 
-    });
+  // Adding the provider suffix often helps the router map the request correctly
+  model: "mistralai/Mistral-7B-Instruct-v0.3:fastest", 
+  messages: [
+      { role: "system", content: "You are a strict technical decision advisor." },
+      { role: "user", content: prompt }
+  ] 
+});
+
 
     const reply = completion.choices[0].message.content;
 
